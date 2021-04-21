@@ -1,0 +1,48 @@
+.table-view{
+-fx-border-weight:10px;
+-fx-border-color: black;
+}
+
+.table-cell{
+-fx-border-width: 1px 1px 1px 1px;
+    -fx-border-color: black;
+}
+
+
+.table-row1-cell-first{
+-fx-border-width: 4px 1px 1px 4px;
+    -fx-border-color: black;
+}
+.table-row-cullomn-cell1{
+-fx-border-width: 4px 4px 1px 1px;
+    -fx-border-color: black;
+}
+.table-row-cell1{
+ -fx-border-width: 4px 1px 1px 1px;
+    -fx-border-color: black;
+}
+
+.table-row-cell3 ,.table-row-cell6, .table-row-cell9{
+    -fx-border-width: 1px 1px 4px 1px;
+    -fx-border-color: black;
+}
+
+.table-collumn-cell3, .table-cullomn-cell6, .table-collumn-cell9{
+    -fx-border-width: 1px 4px 1px 1px;
+    -fx-border-color: black;
+}
+
+.table-row-cullomn-cell3, .table-row-cullomn-cell6{
+    -fx-border-width: 1px 4px 4px 1px;
+    -fx-border-color: black;
+}
+
+.table-cullomn-cell1{
+  -fx-border-width: 1px 1px 1px 4px;
+    -fx-border-color: black;
+}
+
+.table-row3-cullomn1, .table-row9-collumn1{
+ -fx-border-width: 1px 1px 4px 4px;
+    -fx-border-color: black;
+}
