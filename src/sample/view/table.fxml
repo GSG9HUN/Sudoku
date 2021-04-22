@@ -132,44 +132,98 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <Label fx:id="L11" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="59.0" styleClass="table-row1-cell-first" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Label fx:id="L12" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="59.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <Label fx:id="L11" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="59.0" styleClass="table-row1-cell-first" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font></Label>
+            <Label fx:id="L12" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="59.0" prefWidth="59.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
                <styleClass>
                   <String fx:value="table-row-cell1" />
                   <String fx:value="table-cell" />
                </styleClass>
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
             </Label>
-            <Label fx:id="L19" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="40.0" prefWidth="65.0" styleClass="table-row-column-cell1" GridPane.columnIndex="9" GridPane.rowIndex="1" />
-            <Label fx:id="L18" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="40.0" prefWidth="81.0" styleClass="table-row-cell1" GridPane.columnIndex="8" GridPane.rowIndex="1" />
-            <Label fx:id="L17" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="40.0" prefWidth="88.0" styleClass="table-row-cell1" GridPane.columnIndex="7" GridPane.rowIndex="1" />
-            <Label fx:id="L16" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="40.0" prefWidth="109.0" styleClass="table-row-column-cell1" GridPane.columnIndex="6" GridPane.rowIndex="1" />
-            <Label fx:id="L15" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="40.0" prefWidth="101.0" styleClass="table-row-cell1" GridPane.columnIndex="5" GridPane.rowIndex="1" />
-            <Label fx:id="L14" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="40.0" prefWidth="132.0" styleClass="table-row-cell1" GridPane.columnIndex="4" GridPane.rowIndex="1" />
-            <Label fx:id="L13" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="59.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+            <Label fx:id="L19" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="40.0" prefWidth="65.0" styleClass="table-row-column-cell1" GridPane.columnIndex="9" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font></Label>
+            <Label fx:id="L18" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="40.0" prefWidth="81.0" styleClass="table-row-cell1" GridPane.columnIndex="8" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font></Label>
+            <Label fx:id="L17" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="40.0" prefWidth="88.0" styleClass="table-row-cell1" GridPane.columnIndex="7" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font></Label>
+            <Label fx:id="L16" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="40.0" prefWidth="109.0" styleClass="table-row-column-cell1" GridPane.columnIndex="6" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font></Label>
+            <Label fx:id="L15" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="40.0" prefWidth="101.0" styleClass="table-row-cell1" GridPane.columnIndex="5" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font></Label>
+            <Label fx:id="L14" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="40.0" prefWidth="132.0" styleClass="table-row-cell1" GridPane.columnIndex="4" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font></Label>
+            <Label fx:id="L13" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="41.0" prefWidth="84.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
                <styleClass>
                   <String fx:value="table-row-column-cell1" />
                   <String fx:value="table-cell" />
                </styleClass>
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
             </Label>
             <Label fx:id="L21" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="59.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <styleClass>
                   <String fx:value="table-column-cell1" />
                   <String fx:value="table-cell" />
                </styleClass>
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
             </Label>
-            <Label fx:id="L29" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="40.0" prefWidth="82.0" styleClass="table-column-cell9" GridPane.columnIndex="9" GridPane.rowIndex="2" />
-            <Label fx:id="L28" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="40.0" prefWidth="87.0" styleClass="table-cell" GridPane.columnIndex="8" GridPane.rowIndex="2" />
-            <Label fx:id="L27" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="40.0" prefWidth="83.0" styleClass="table-cell" GridPane.columnIndex="7" GridPane.rowIndex="2" />
-            <Label fx:id="L26" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="40.0" prefWidth="84.0" styleClass="table-column-cell6" GridPane.columnIndex="6" GridPane.rowIndex="2" />
-            <Label fx:id="L25" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="40.0" prefWidth="94.0" styleClass="table-cell" GridPane.columnIndex="5" GridPane.rowIndex="2" />
-            <Label fx:id="L24" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="40.0" prefWidth="93.0" styleClass="table-cell" GridPane.columnIndex="4" GridPane.rowIndex="2" />
-            <Label fx:id="L23" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="59.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
+            <Label fx:id="L29" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="40.0" prefWidth="82.0" styleClass="table-column-cell9" GridPane.columnIndex="9" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font></Label>
+            <Label fx:id="L28" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="40.0" prefWidth="87.0" styleClass="table-cell" GridPane.columnIndex="8" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font></Label>
+            <Label fx:id="L27" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="40.0" prefWidth="83.0" styleClass="table-cell" GridPane.columnIndex="7" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font></Label>
+            <Label fx:id="L26" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="40.0" prefWidth="84.0" styleClass="table-column-cell6" GridPane.columnIndex="6" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font></Label>
+            <Label fx:id="L25" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="40.0" prefWidth="94.0" styleClass="table-cell" GridPane.columnIndex="5" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font></Label>
+            <Label fx:id="L24" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="40.0" prefWidth="93.0" styleClass="table-cell" GridPane.columnIndex="4" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font></Label>
+            <Label fx:id="L23" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="40.0" prefWidth="103.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
                <styleClass>
                   <String fx:value="table-column-cell3" />
                   <String fx:value="table-cell" />
                </styleClass>
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
             </Label>
-            <Label fx:id="L22" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="59.0" styleClass="table-cell" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Label fx:id="L22" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="61.0" prefWidth="59.0" styleClass="table-cell" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font></Label>
             <Label fx:id="L91" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="59.0" styleClass="table-row9-column1" GridPane.columnIndex="1" GridPane.rowIndex="9" />
             <Label fx:id="L81" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="59.0" styleClass="table-column-cell1" GridPane.columnIndex="1" GridPane.rowIndex="8" />
             <Label fx:id="L71" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="59.0" styleClass="table-column-cell1" GridPane.columnIndex="1" GridPane.rowIndex="7" />
@@ -181,6 +235,9 @@
                   <String fx:value="table-row3-column1" />
                   <String fx:value="table-cell" />
                </styleClass>
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
             </Label>
             <Label fx:id="L39" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="40.0" prefWidth="96.0" styleClass="table-row-column-cell6" GridPane.columnIndex="9" GridPane.rowIndex="3" />
             <Label fx:id="L38" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="40.0" prefWidth="79.0" styleClass="table-row-cell3" GridPane.columnIndex="8" GridPane.rowIndex="3" />
@@ -194,6 +251,9 @@
                   <String fx:value="table-row-cell3" />
                   <String fx:value="table-cell" />
                </styleClass>
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
             </Label>
             <Label fx:id="L41" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="59.0" styleClass="table-column-cell1" GridPane.columnIndex="1" GridPane.rowIndex="4" />
             <Label fx:id="L49" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="40.0" prefWidth="120.0" styleClass="table-column-cell9" GridPane.columnIndex="9" GridPane.rowIndex="4" />
@@ -243,7 +303,13 @@
             <Label fx:id="L95" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="39.0" prefWidth="87.0" styleClass="table-row-cell9" GridPane.columnIndex="5" GridPane.rowIndex="9" />
             <Label fx:id="L94" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="39.0" prefWidth="107.0" styleClass="table-row-cell9" GridPane.columnIndex="4" GridPane.rowIndex="9" />
             <Label fx:id="L93" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="59.0" styleClass="table-row-column-cell6" GridPane.columnIndex="3" GridPane.rowIndex="9" />
+
+
+
+
          </children>
+
+
       </GridPane>
       <Label layoutX="630.0" layoutY="71.0" text="Time: ">
          <font>
@@ -266,4 +332,121 @@
          </font>
       </Button>
    </children>
+
+   <fx:define>
+      <ArrayList fx:id="labels">
+            <ArrayList fx:id="row1">
+                  <fx:reference source="L11" />
+                  <fx:reference source="L12" />
+                  <fx:reference source="L13" />
+                  <fx:reference source="L14" />
+                  <fx:reference source="L15" />
+                  <fx:reference source="L16" />
+                  <fx:reference source="L17" />
+                  <fx:reference source="L18" />
+                  <fx:reference source="L19" />
+            </ArrayList>
+            <ArrayList fx:id="row2">
+                  <fx:reference source="L21" />
+                  <fx:reference source="L22" />
+                  <fx:reference source="L23" />
+                  <fx:reference source="L24" />
+                  <fx:reference source="L25" />
+                  <fx:reference source="L26" />
+                  <fx:reference source="L27" />
+                  <fx:reference source="L28" />
+                  <fx:reference source="L29" />
+            </ArrayList>
+            <ArrayList fx:id="row3">
+                  <fx:reference source="L31" />
+                  <fx:reference source="L32" />
+                  <fx:reference source="L33" />
+                  <fx:reference source="L34" />
+                  <fx:reference source="L35" />
+                  <fx:reference source="L36" />
+                  <fx:reference source="L37" />
+                  <fx:reference source="L38" />
+                  <fx:reference source="L39" />
+            </ArrayList>
+            <ArrayList fx:id="row4">
+                  <fx:reference source="L41" />
+                  <fx:reference source="L42" />
+                  <fx:reference source="L43" />
+                  <fx:reference source="L44" />
+                  <fx:reference source="L45" />
+                  <fx:reference source="L46" />
+                  <fx:reference source="L47" />
+                  <fx:reference source="L48" />
+                  <fx:reference source="L49" />
+            </ArrayList>
+            <ArrayList fx:id="row5">
+                  <fx:reference source="L51" />
+                  <fx:reference source="L52" />
+                  <fx:reference source="L53" />
+                  <fx:reference source="L54" />
+                  <fx:reference source="L55" />
+                  <fx:reference source="L56" />
+                  <fx:reference source="L57" />
+                  <fx:reference source="L58" />
+                  <fx:reference source="L59" />
+            </ArrayList>
+            <ArrayList fx:id="row6">
+                  <fx:reference source="L61" />
+                  <fx:reference source="L62" />
+                  <fx:reference source="L63" />
+                  <fx:reference source="L64" />
+                  <fx:reference source="L65" />
+                  <fx:reference source="L66" />
+                  <fx:reference source="L67" />
+                  <fx:reference source="L68" />
+                  <fx:reference source="L69" />
+            </ArrayList>
+            <ArrayList fx:id="row7">
+
+                  <fx:reference source="L71" />
+                  <fx:reference source="L72" />
+                  <fx:reference source="L73" />
+                  <fx:reference source="L74" />
+                  <fx:reference source="L75" />
+                  <fx:reference source="L76" />
+                  <fx:reference source="L77" />
+                  <fx:reference source="L78" />
+                  <fx:reference source="L79" />
+
+            </ArrayList>
+
+
+            <ArrayList fx:id="row8">
+
+                  <fx:reference source="L81" />
+                  <fx:reference source="L82" />
+                  <fx:reference source="L83" />
+                  <fx:reference source="L84" />
+                  <fx:reference source="L85" />
+                  <fx:reference source="L86" />
+                  <fx:reference source="L87" />
+                  <fx:reference source="L88" />
+                  <fx:reference source="L89" />
+            </ArrayList>
+
+
+            <ArrayList fx:id="row9">
+
+                  <fx:reference source="L91" />
+                  <fx:reference source="L92" />
+                  <fx:reference source="L93" />
+                  <fx:reference source="L94" />
+                  <fx:reference source="L95" />
+                  <fx:reference source="L96" />
+                  <fx:reference source="L97" />
+                  <fx:reference source="L98" />
+                  <fx:reference source="L99" />
+
+            </ArrayList>
+
+
+
+
+      </ArrayList>
+   </fx:define>
 </AnchorPane>
