@@ -26,13 +26,13 @@ public class GameController {
 
     @FXML
     public  void initialize() {
-        game = new Game();
-        setGui();
+            game = new Game();
+            setGui();
+
     }
 
     private  void setGui() {
 
-    labels.get(0).get(0).setDisable(true);
 
         for (int i=0;i<9;i++){
             for (int j=0;j<9;j++){
@@ -60,8 +60,5 @@ public class GameController {
     public void ready(MouseEvent mouseEvent) {
     }
 
-    public void selectedDigit(MouseEvent mouseEvent) {
 
-        StageChanger.closeNumbers();
-    }
 }

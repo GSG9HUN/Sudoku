@@ -1,52 +1,68 @@
 .table-view{
 -fx-border-weight:10px;
 -fx-border-color: black;
+-fx-cell-size: 50px;
 }
-
 
 .table-cell{
 -fx-border-width: 1px 1px 1px 1px;
     -fx-border-color: black;
 }
+
 .table-row1-cell-first{
 -fx-border-width: 4px 1px 1px 4px;
     -fx-border-color: black;
 }
+
+
 
 .table-row-column-cell1{
 -fx-border-width: 4px 4px 1px 1px;
     -fx-border-color: black;
 }
 
+
+
 .table-row-cell1{
  -fx-border-width: 4px 1px 1px 1px;
     -fx-border-color: black;
 }
+
+
 
 .table-row-cell3 ,.table-row-cell6, .table-row-cell9{
     -fx-border-width: 1px 1px 4px 1px;
     -fx-border-color: black;
 }
 
+
+
 .table-column-cell3, .table-column-cell6, .table-column-cell9{
     -fx-border-width: 1px 4px 1px 1px;
     -fx-border-color: black;
 }
+
+
 
 .table-row-column-cell3, .table-row-column-cell6{
     -fx-border-width: 1px 4px 4px 1px;
     -fx-border-color: black;
 }
 
+
 .table-column-cell1{
   -fx-border-width: 1px 1px 1px 4px;
     -fx-border-color: black;
 }
 
+
+
 .table-row3-column1, .table-row9-column1{
  -fx-border-width: 1px 1px 4px 4px;
     -fx-border-color: black;
 }
+
+
 
 .table-row1-cell-first:disabled,
 .table-cell:disabled,

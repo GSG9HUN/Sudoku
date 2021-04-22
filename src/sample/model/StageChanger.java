@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import sample.controller.GameController;
 
 import java.io.IOException;
 
@@ -51,7 +52,8 @@ public class StageChanger {
     }
 
 
-    public static void closeNumbers(){
+    public static void closeNumbers(int num){
+        
         secondStage.close();
     }
 }

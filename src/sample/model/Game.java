@@ -20,17 +20,16 @@ public class Game {
         while (cluesOnBoard!=clues){
             int row = rand.nextInt(9);
             int col = rand.nextInt(9);
-            while (table[row][col]==0){
-                int num = rand.nextInt(9)+1;
-                if(isSafe(row,col,num)){
-                    table[row][col]=num;
-                    cluesOnBoard++;
-                }
+            int num = rand.nextInt(9)+1;
+            if(isSafe(row,col,num)){
+                table[row][col]=num;
+                cluesOnBoard++;
+            }
             }
 
         }
 
-    }
+
 
     private void init() {
 
@@ -41,14 +40,18 @@ public class Game {
         }
 
         switch (Options.getDifficulties()){
-            case "Beginner": clues=30;
+            case "Beginner": clues=40;
                 break;
-            case "Easy":clues=25;
+            case "Easy":clues=35;
                 break;
-            case "Medium": clues=20;
+            case "Medium": clues=30;
                 break;
-            case "Hard":clues=17;
+            case "Hard":clues=25;
                 break;
+            case "Expert":clues=20;
+                break;
+            case "Ultimate":clues=17;
+            break;
         }
     }
 

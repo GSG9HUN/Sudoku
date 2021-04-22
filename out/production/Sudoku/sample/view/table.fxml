@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.String?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -10,385 +9,761 @@
 <?import javafx.scene.text.Font?>
 
 <?import java.util.ArrayList?>
-<?import java.util.ArrayList ?>
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="485.0" prefWidth="754.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.GameController">
-   <children>
-      <Label layoutX="269.0" layoutY="26.0" text="Sudoku">
-         <font>
-            <Font name="System Bold Italic" size="30.0" />
-         </font>
-      </Label>
-      <GridPane id="GameTable" layoutX="14.0" layoutY="71.0" prefHeight="400.0" prefWidth="600.0" styleClass="table-view" stylesheets="@table.css">
-         <columnConstraints>
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-         </columnConstraints>
-         <rowConstraints>
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-         </rowConstraints>
-         <children>
-            <Label alignment="TOP_CENTER" prefHeight="17.0" prefWidth="60.0" text="1" GridPane.columnIndex="1">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
-            <Label alignment="TOP_CENTER" prefHeight="17.0" prefWidth="60.0" text="8" GridPane.columnIndex="8">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
-            <Label alignment="TOP_CENTER" prefHeight="17.0" prefWidth="60.0" text="7" GridPane.columnIndex="7">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
-            <Label alignment="TOP_CENTER" prefHeight="17.0" prefWidth="60.0" text="6" GridPane.columnIndex="6">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
-            <Label alignment="TOP_CENTER" prefHeight="17.0" prefWidth="60.0" text="5" GridPane.columnIndex="5">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
-            <Label alignment="TOP_CENTER" prefHeight="17.0" prefWidth="60.0" text="4" GridPane.columnIndex="4">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
-            <Label alignment="TOP_CENTER" prefHeight="17.0" prefWidth="60.0" text="3" GridPane.columnIndex="3">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
-            <Label alignment="TOP_CENTER" prefHeight="17.0" prefWidth="60.0" text="2" GridPane.columnIndex="2">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
-            <Label alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="30.0" prefWidth="59.0" text="9" textAlignment="JUSTIFY" textOverrun="CENTER_ELLIPSIS" GridPane.columnIndex="9">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
-            <Label alignment="TOP_CENTER" prefHeight="17.0" prefWidth="60.0" text="4" GridPane.rowIndex="4">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
-            <Label alignment="TOP_CENTER" prefHeight="17.0" prefWidth="60.0" text="5" GridPane.rowIndex="5">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
-            <Label alignment="TOP_CENTER" prefHeight="17.0" prefWidth="60.0" text="6" GridPane.rowIndex="6">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
-            <Label alignment="TOP_CENTER" prefHeight="17.0" prefWidth="60.0" text="7" GridPane.rowIndex="7">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
-            <Label alignment="TOP_CENTER" prefHeight="17.0" prefWidth="60.0" text="8" GridPane.rowIndex="8">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
-            <Label alignment="TOP_CENTER" prefHeight="17.0" prefWidth="60.0" text="9" GridPane.rowIndex="9">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
-            <Label alignment="TOP_CENTER" prefHeight="17.0" prefWidth="60.0" text="2" GridPane.rowIndex="2">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
-            <Label alignment="TOP_CENTER" prefHeight="17.0" prefWidth="60.0" text="3" GridPane.rowIndex="3">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
-            <Label alignment="TOP_CENTER" prefHeight="17.0" prefWidth="60.0" text="1" GridPane.rowIndex="1">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
-            <Label fx:id="L11" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="59.0" styleClass="table-row1-cell-first" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Label fx:id="L12" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="59.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
-               <styleClass>
-                  <String fx:value="table-row-cell1" />
-                  <String fx:value="table-cell" />
-               </styleClass>
-            </Label>
-            <Label fx:id="L19" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="40.0" prefWidth="65.0" styleClass="table-row-column-cell1" GridPane.columnIndex="9" GridPane.rowIndex="1" />
-            <Label fx:id="L18" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="40.0" prefWidth="81.0" styleClass="table-row-cell1" GridPane.columnIndex="8" GridPane.rowIndex="1" />
-            <Label fx:id="L17" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="40.0" prefWidth="88.0" styleClass="table-row-cell1" GridPane.columnIndex="7" GridPane.rowIndex="1" />
-            <Label fx:id="L16" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="40.0" prefWidth="109.0" styleClass="table-row-column-cell1" GridPane.columnIndex="6" GridPane.rowIndex="1" />
-            <Label fx:id="L15" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="40.0" prefWidth="101.0" styleClass="table-row-cell1" GridPane.columnIndex="5" GridPane.rowIndex="1" />
-            <Label fx:id="L14" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="40.0" prefWidth="132.0" styleClass="table-row-cell1" GridPane.columnIndex="4" GridPane.rowIndex="1" />
-            <Label fx:id="L13" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="59.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
-               <styleClass>
-                  <String fx:value="table-row-column-cell1" />
-                  <String fx:value="table-cell" />
-               </styleClass>
-            </Label>
-            <Label fx:id="L21" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="59.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
-               <styleClass>
-                  <String fx:value="table-column-cell1" />
-                  <String fx:value="table-cell" />
-               </styleClass>
-            </Label>
-            <Label fx:id="L29" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="40.0" prefWidth="82.0" styleClass="table-column-cell9" GridPane.columnIndex="9" GridPane.rowIndex="2" />
-            <Label fx:id="L28" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="40.0" prefWidth="87.0" styleClass="table-cell" GridPane.columnIndex="8" GridPane.rowIndex="2" />
-            <Label fx:id="L27" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="40.0" prefWidth="83.0" styleClass="table-cell" GridPane.columnIndex="7" GridPane.rowIndex="2" />
-            <Label fx:id="L26" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="40.0" prefWidth="84.0" styleClass="table-column-cell6" GridPane.columnIndex="6" GridPane.rowIndex="2" />
-            <Label fx:id="L25" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="40.0" prefWidth="94.0" styleClass="table-cell" GridPane.columnIndex="5" GridPane.rowIndex="2" />
-            <Label fx:id="L24" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="40.0" prefWidth="93.0" styleClass="table-cell" GridPane.columnIndex="4" GridPane.rowIndex="2" />
-            <Label fx:id="L23" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="59.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
-               <styleClass>
-                  <String fx:value="table-column-cell3" />
-                  <String fx:value="table-cell" />
-               </styleClass>
-            </Label>
-            <Label fx:id="L22" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="59.0" styleClass="table-cell" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-            <Label fx:id="L91" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="59.0" styleClass="table-row9-column1" GridPane.columnIndex="1" GridPane.rowIndex="9" />
-            <Label fx:id="L81" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="59.0" styleClass="table-column-cell1" GridPane.columnIndex="1" GridPane.rowIndex="8" />
-            <Label fx:id="L71" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="59.0" styleClass="table-column-cell1" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-            <Label fx:id="L61" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="59.0" styleClass="table-row3-column1" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-            <Label fx:id="L51" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="59.0" styleClass="table-column-cell1" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-            <Label fx:id="L42" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="59.0" styleClass="table-cell" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-            <Label fx:id="L31" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="59.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
-               <styleClass>
-                  <String fx:value="table-row3-column1" />
-                  <String fx:value="table-cell" />
-               </styleClass>
-            </Label>
-            <Label fx:id="L39" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="40.0" prefWidth="96.0" styleClass="table-row-column-cell6" GridPane.columnIndex="9" GridPane.rowIndex="3" />
-            <Label fx:id="L38" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="40.0" prefWidth="79.0" styleClass="table-row-cell3" GridPane.columnIndex="8" GridPane.rowIndex="3" />
-            <Label fx:id="L37" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="40.0" prefWidth="98.0" styleClass="table-row-cell3" GridPane.columnIndex="7" GridPane.rowIndex="3" />
-            <Label fx:id="L36" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="40.0" prefWidth="78.0" styleClass="table-row-column-cell3" GridPane.columnIndex="6" GridPane.rowIndex="3" />
-            <Label fx:id="L35" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="40.0" prefWidth="85.0" styleClass="table-row-cell3" GridPane.columnIndex="5" GridPane.rowIndex="3" />
-            <Label fx:id="L34" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="40.0" prefWidth="83.0" styleClass="table-row-cell3" GridPane.columnIndex="4" GridPane.rowIndex="3" />
-            <Label fx:id="L33" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="59.0" styleClass="table-row-column-cell3" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-            <Label fx:id="L32" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="59.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
-               <styleClass>
-                  <String fx:value="table-row-cell3" />
-                  <String fx:value="table-cell" />
-               </styleClass>
-            </Label>
-            <Label fx:id="L41" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="59.0" styleClass="table-column-cell1" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-            <Label fx:id="L49" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="40.0" prefWidth="120.0" styleClass="table-column-cell9" GridPane.columnIndex="9" GridPane.rowIndex="4" />
-            <Label fx:id="L48" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="40.0" prefWidth="92.0" styleClass="table-cell" GridPane.columnIndex="8" GridPane.rowIndex="4" />
-            <Label fx:id="L47" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="40.0" prefWidth="85.0" styleClass="table-cell" GridPane.columnIndex="7" GridPane.rowIndex="4" />
-            <Label fx:id="L46" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="40.0" prefWidth="81.0" styleClass="table-column-cell6" GridPane.columnIndex="6" GridPane.rowIndex="4" />
-            <Label fx:id="L45" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="40.0" prefWidth="86.0" styleClass="table-cell" GridPane.columnIndex="5" GridPane.rowIndex="4" />
-            <Label fx:id="L44" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="40.0" prefWidth="103.0" styleClass="table-cell" GridPane.columnIndex="4" GridPane.rowIndex="4" />
-            <Label fx:id="L43" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="59.0" styleClass="table-column-cell3" GridPane.columnIndex="3" GridPane.rowIndex="4" />
-            <Label fx:id="L52" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="59.0" styleClass="table-cell" GridPane.columnIndex="2" GridPane.rowIndex="5" />
-            <Label fx:id="L59" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="40.0" prefWidth="116.0" styleClass="table-column-cell9" GridPane.columnIndex="9" GridPane.rowIndex="5" />
-            <Label fx:id="L58" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="40.0" prefWidth="85.0" styleClass="table-cell" GridPane.columnIndex="8" GridPane.rowIndex="5" />
-            <Label fx:id="L57" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="40.0" prefWidth="78.0" styleClass="table-cell" GridPane.columnIndex="7" GridPane.rowIndex="5" />
-            <Label fx:id="L56" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="40.0" prefWidth="91.0" styleClass="table-column-cell6" GridPane.columnIndex="6" GridPane.rowIndex="5" />
-            <Label fx:id="L55" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="40.0" prefWidth="101.0" styleClass="table-cell" GridPane.columnIndex="5" GridPane.rowIndex="5" />
-            <Label fx:id="L54" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="40.0" prefWidth="103.0" styleClass="table-cell" GridPane.columnIndex="4" GridPane.rowIndex="5" />
-            <Label fx:id="L53" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="59.0" styleClass="table-column-cell3" GridPane.columnIndex="3" GridPane.rowIndex="5" />
-            <Label fx:id="L62" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="59.0" styleClass="table-row-cell6" GridPane.columnIndex="2" GridPane.rowIndex="6" />
-            <Label fx:id="L69" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="39.0" prefWidth="143.0" styleClass="table-row-column-cell6" GridPane.columnIndex="9" GridPane.rowIndex="6" />
-            <Label fx:id="L68" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="39.0" prefWidth="82.0" styleClass="table-row-cell6" GridPane.columnIndex="8" GridPane.rowIndex="6" />
-            <Label fx:id="L67" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="39.0" prefWidth="83.0" styleClass="table-row-cell6" GridPane.columnIndex="7" GridPane.rowIndex="6" />
-            <Label fx:id="L66" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="39.0" prefWidth="88.0" styleClass="table-row-column-cell6" GridPane.columnIndex="6" GridPane.rowIndex="6" />
-            <Label fx:id="L65" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="39.0" prefWidth="93.0" styleClass="table-row-cell6" GridPane.columnIndex="5" GridPane.rowIndex="6" />
-            <Label fx:id="L64" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="39.0" prefWidth="113.0" styleClass="table-row-cell6" GridPane.columnIndex="4" GridPane.rowIndex="6" />
-            <Label fx:id="L63" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="59.0" styleClass="table-row-column-cell6" GridPane.columnIndex="3" GridPane.rowIndex="6" />
-            <Label fx:id="L72" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="59.0" styleClass="table-cell" GridPane.columnIndex="2" GridPane.rowIndex="7" />
-            <Label fx:id="L79" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="39.0" prefWidth="115.0" styleClass="table-column-cell9" GridPane.columnIndex="9" GridPane.rowIndex="7" />
-            <Label fx:id="L78" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="39.0" prefWidth="92.0" styleClass="table-cell" GridPane.columnIndex="8" GridPane.rowIndex="7" />
-            <Label fx:id="L77" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="39.0" prefWidth="91.0" styleClass="table-cell" GridPane.columnIndex="7" GridPane.rowIndex="7" />
-            <Label fx:id="L76" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="39.0" prefWidth="89.0" styleClass="table-column-cell6" GridPane.columnIndex="6" GridPane.rowIndex="7" />
-            <Label fx:id="L75" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="39.0" prefWidth="102.0" styleClass="table-cell" GridPane.columnIndex="5" GridPane.rowIndex="7" />
-            <Label fx:id="L74" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="39.0" prefWidth="98.0" styleClass="table-cell" GridPane.columnIndex="4" GridPane.rowIndex="7" />
-            <Label fx:id="L73" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="59.0" styleClass="table-column-cell3" GridPane.columnIndex="3" GridPane.rowIndex="7" />
-            <Label fx:id="L82" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="59.0" styleClass="table-cell" GridPane.columnIndex="2" GridPane.rowIndex="8" />
-            <Label fx:id="L89" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="39.0" prefWidth="125.0" styleClass="table-column-cell9" GridPane.columnIndex="9" GridPane.rowIndex="8" />
-            <Label fx:id="L88" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="39.0" prefWidth="107.0" styleClass="table-cell" GridPane.columnIndex="8" GridPane.rowIndex="8" />
-            <Label fx:id="L87" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="39.0" prefWidth="94.0" styleClass="table-cell" GridPane.columnIndex="7" GridPane.rowIndex="8" />
-            <Label fx:id="L86" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="39.0" prefWidth="82.0" styleClass="table-column-cell6" GridPane.columnIndex="6" GridPane.rowIndex="8" />
-            <Label fx:id="L85" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="39.0" prefWidth="96.0" styleClass="table-cell" GridPane.columnIndex="5" GridPane.rowIndex="8" />
-            <Label fx:id="L84" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="39.0" prefWidth="87.0" styleClass="table-cell" GridPane.columnIndex="4" GridPane.rowIndex="8" />
-            <Label fx:id="L83" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="59.0" styleClass="table-column-cell3" GridPane.columnIndex="3" GridPane.rowIndex="8" />
-            <Label fx:id="L92" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="59.0" styleClass="table-row-cell9" GridPane.columnIndex="2" GridPane.rowIndex="9" />
-            <Label fx:id="L99" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="39.0" prefWidth="102.0" styleClass="table-row-column-cell6" GridPane.columnIndex="9" GridPane.rowIndex="9" />
-            <Label fx:id="L98" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="39.0" prefWidth="101.0" styleClass="table-row-cell9" GridPane.columnIndex="8" GridPane.rowIndex="9" />
-            <Label fx:id="L97" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="39.0" prefWidth="101.0" styleClass="table-row-cell9" GridPane.columnIndex="7" GridPane.rowIndex="9" />
-            <Label fx:id="L96" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="39.0" prefWidth="78.0" styleClass="table-row-column-cell6" GridPane.columnIndex="6" GridPane.rowIndex="9" />
-            <Label fx:id="L95" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="39.0" prefWidth="87.0" styleClass="table-row-cell9" GridPane.columnIndex="5" GridPane.rowIndex="9" />
-            <Label fx:id="L94" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="39.0" prefWidth="107.0" styleClass="table-row-cell9" GridPane.columnIndex="4" GridPane.rowIndex="9" />
-            <Label fx:id="L93" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="59.0" styleClass="table-row-column-cell6" GridPane.columnIndex="3" GridPane.rowIndex="9" />
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="621.0"
+            prefWidth="768.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="sample.controller.GameController">
+    <children>
+        <Label layoutX="269.0" layoutY="26.0" text="Sudoku">
+            <font>
+                <Font name="System Bold Italic" size="30.0"/>
+            </font>
+        </Label>
+        <GridPane id="GameTable" layoutX="14.0" layoutY="71.0" prefHeight="400.0" prefWidth="600.0"
+                  styleClass="table-view" stylesheets="@table.css">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" prefWidth="100.0"/>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="1.7976931348623157E308"
+                                   prefWidth="100.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" prefWidth="100.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" prefWidth="100.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" prefWidth="100.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" prefWidth="100.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" prefWidth="100.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" prefWidth="100.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" prefWidth="100.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" prefWidth="100.0"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="1.7976931348623157E308" minHeight="-Infinity" vgrow="SOMETIMES"/>
+                <RowConstraints maxHeight="1.7976931348623157E308" minHeight="-Infinity" vgrow="SOMETIMES"/>
+                <RowConstraints maxHeight="1.7976931348623157E308" minHeight="-Infinity" vgrow="SOMETIMES"/>
+                <RowConstraints maxHeight="1.7976931348623157E308" minHeight="-Infinity" vgrow="SOMETIMES"/>
+                <RowConstraints maxHeight="1.7976931348623157E308" minHeight="-Infinity" vgrow="SOMETIMES"/>
+                <RowConstraints maxHeight="1.7976931348623157E308" minHeight="-Infinity" vgrow="SOMETIMES"/>
+                <RowConstraints maxHeight="1.7976931348623157E308" minHeight="-Infinity" vgrow="SOMETIMES"/>
+                <RowConstraints maxHeight="1.7976931348623157E308" minHeight="-Infinity" vgrow="SOMETIMES"/>
+                <RowConstraints maxHeight="1.7976931348623157E308" minHeight="-Infinity" vgrow="SOMETIMES"/>
+                <RowConstraints maxHeight="1.7976931348623157E308" minHeight="-Infinity" vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <children>
+                <Label alignment="CENTER" prefHeight="52.0" prefWidth="59.0" text="1" GridPane.columnIndex="1">
+                    <font>
+                        <Font size="20.0"/>
+                    </font>
+                </Label>
+                <Label alignment="CENTER" prefHeight="52.0" prefWidth="59.0" text="8" GridPane.columnIndex="8">
+                    <font>
+                        <Font size="20.0"/>
+                    </font>
+                </Label>
+                <Label alignment="CENTER" prefHeight="52.0" prefWidth="59.0" text="7" GridPane.columnIndex="7">
+                    <font>
+                        <Font size="20.0"/>
+                    </font>
+                </Label>
+                <Label alignment="CENTER" prefHeight="52.0" prefWidth="59.0" text="6" GridPane.columnIndex="6">
+                    <font>
+                        <Font size="20.0"/>
+                    </font>
+                </Label>
+                <Label alignment="CENTER" prefHeight="52.0" prefWidth="59.0" text="5" GridPane.columnIndex="5">
+                    <font>
+                        <Font size="20.0"/>
+                    </font>
+                </Label>
+                <Label alignment="CENTER" prefHeight="52.0" prefWidth="59.0" text="4" GridPane.columnIndex="4">
+                    <font>
+                        <Font size="20.0"/>
+                    </font>
+                </Label>
+                <Label alignment="CENTER" prefHeight="52.0" prefWidth="59.0" text="3" GridPane.columnIndex="3">
+                    <font>
+                        <Font size="20.0"/>
+                    </font>
+                </Label>
+                <Label alignment="CENTER" prefHeight="52.0" prefWidth="59.0" text="2" GridPane.columnIndex="2">
+                    <font>
+                        <Font size="20.0"/>
+                    </font>
+                </Label>
+                <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="52.0" prefWidth="59.0" text="9"
+                       textAlignment="JUSTIFY" textOverrun="CENTER_ELLIPSIS" GridPane.columnIndex="9">
+                    <font>
+                        <Font size="20.0"/>
+                    </font>
+                </Label>
+                <Label alignment="CENTER" prefHeight="52.0" prefWidth="59.0" text="4" GridPane.rowIndex="4">
+                    <font>
+                        <Font size="20.0"/>
+                    </font>
+                </Label>
+                <Label alignment="CENTER" prefHeight="52.0" prefWidth="59.0" text="5" GridPane.rowIndex="5">
+                    <font>
+                        <Font size="20.0"/>
+                    </font>
+                </Label>
+                <Label alignment="CENTER" prefHeight="47.0" prefWidth="59.0" text="6" GridPane.rowIndex="6">
+                    <font>
+                        <Font size="20.0"/>
+                    </font>
+                </Label>
+                <Label alignment="CENTER" prefHeight="52.0" prefWidth="59.0" text="7" GridPane.rowIndex="7">
+                    <font>
+                        <Font size="20.0"/>
+                    </font>
+                </Label>
+                <Label alignment="CENTER" prefHeight="52.0" prefWidth="59.0" text="8" GridPane.rowIndex="8">
+                    <font>
+                        <Font size="20.0"/>
+                    </font>
+                </Label>
+                <Label alignment="CENTER" prefHeight="52.0" prefWidth="59.0" text="9" GridPane.rowIndex="9">
+                    <font>
+                        <Font size="20.0"/>
+                    </font>
+                </Label>
+                <Label alignment="CENTER" prefHeight="52.0" prefWidth="59.0" text="2" GridPane.rowIndex="2">
+                    <font>
+                        <Font size="20.0"/>
+                    </font>
+                </Label>
+                <Label alignment="CENTER" prefHeight="52.0" prefWidth="59.0" text="3" GridPane.rowIndex="3">
+                    <font>
+                        <Font size="20.0"/>
+                    </font>
+                </Label>
+                <Label alignment="CENTER" prefHeight="52.0" prefWidth="59.0" text="1" GridPane.rowIndex="1">
+                    <font>
+                        <Font size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L11" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="59.0"
+                       styleClass="table-row1-cell-first" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L12" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="59.0"
+                       styleClass="table-row-cell1" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L19" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="85.0"
+                       styleClass="table-row-column-cell1" GridPane.columnIndex="9" GridPane.rowIndex="1">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L18" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="95.0"
+                       styleClass="table-row-cell1" GridPane.columnIndex="8" GridPane.rowIndex="1">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L17" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="82.0"
+                       styleClass="table-row-cell1" GridPane.columnIndex="7" GridPane.rowIndex="1">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L16" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="89.0"
+                       styleClass="table-row-column-cell1" GridPane.columnIndex="6" GridPane.rowIndex="1">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L15" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="87.0"
+                       styleClass="table-row-cell1" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L14" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="72.0"
+                       styleClass="table-row-cell1" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L13" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="59.0"
+                       styleClass="table-row-column-cell1" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L21" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="59.0"
+                       styleClass="table-column-cell1" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L29" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="100.0"
+                       styleClass="table-column-cell9" GridPane.columnIndex="9" GridPane.rowIndex="2">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L28" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="91.0"
+                       styleClass="table-cell" GridPane.columnIndex="8" GridPane.rowIndex="2">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L27" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="104.0"
+                       styleClass="table-cell" GridPane.columnIndex="7" GridPane.rowIndex="2">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L26" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="84.0"
+                       styleClass="table-column-cell6" GridPane.columnIndex="6" GridPane.rowIndex="2">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L25" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="81.0"
+                       styleClass="table-cell" GridPane.columnIndex="5" GridPane.rowIndex="2">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L24" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="102.0"
+                       styleClass="table-cell" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L23" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="59.0"
+                       styleClass="table-column-cell3" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L22" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="59.0"
+                       styleClass="table-cell" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L61" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="59.0"
+                       styleClass="table-row3-column1" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L51" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="59.0"
+                       styleClass="table-column-cell1" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L42" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="59.0"
+                       styleClass="table-cell" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L31" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="59.0"
+                       styleClass="table-row3-column1" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L39" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="100.0"
+                       styleClass="table-row-column-cell6" GridPane.columnIndex="9" GridPane.rowIndex="3">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L38" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="96.0"
+                       styleClass="table-row-cell3" GridPane.columnIndex="8" GridPane.rowIndex="3">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L37" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="125.0"
+                       styleClass="table-row-cell3" GridPane.columnIndex="7" GridPane.rowIndex="3">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L36" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="119.0"
+                       styleClass="table-row-column-cell3" GridPane.columnIndex="6" GridPane.rowIndex="3">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L35" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="105.0"
+                       styleClass="table-row-cell3" GridPane.columnIndex="5" GridPane.rowIndex="3">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L34" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="90.0"
+                       styleClass="table-row-cell3" GridPane.columnIndex="4" GridPane.rowIndex="3">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L33" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="59.0"
+                       styleClass="table-row-column-cell3" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L32" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="59.0"
+                       styleClass="table-row-cell3" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L41" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="59.0"
+                       styleClass="table-column-cell1" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L49" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="127.0"
+                       styleClass="table-column-cell9" GridPane.columnIndex="9" GridPane.rowIndex="4">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L48" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="103.0"
+                       styleClass="table-cell" GridPane.columnIndex="8" GridPane.rowIndex="4">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L47" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="121.0"
+                       styleClass="table-cell" GridPane.columnIndex="7" GridPane.rowIndex="4">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L46" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="122.0"
+                       styleClass="table-column-cell6" GridPane.columnIndex="6" GridPane.rowIndex="4">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L45" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="105.0"
+                       styleClass="table-cell" GridPane.columnIndex="5" GridPane.rowIndex="4">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L44" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="101.0"
+                       styleClass="table-cell" GridPane.columnIndex="4" GridPane.rowIndex="4">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L43" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="59.0"
+                       styleClass="table-column-cell3" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L52" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="59.0"
+                       styleClass="table-cell" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L59" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="94.0"
+                       styleClass="table-column-cell9" GridPane.columnIndex="9" GridPane.rowIndex="5">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L58" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="97.0"
+                       styleClass="table-cell" GridPane.columnIndex="8" GridPane.rowIndex="5">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L57" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="96.0"
+                       styleClass="table-cell" GridPane.columnIndex="7" GridPane.rowIndex="5">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L56" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="102.0"
+                       styleClass="table-column-cell6" GridPane.columnIndex="6" GridPane.rowIndex="5">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L55" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="103.0"
+                       styleClass="table-cell" GridPane.columnIndex="5" GridPane.rowIndex="5">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L54" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="125.0"
+                       styleClass="table-cell" GridPane.columnIndex="4" GridPane.rowIndex="5">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L53" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="59.0"
+                       styleClass="table-column-cell3" GridPane.columnIndex="3" GridPane.rowIndex="5">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L62" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="59.0"
+                       styleClass="table-row-cell6" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L69" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="113.0"
+                       styleClass="table-row-column-cell6" GridPane.columnIndex="9" GridPane.rowIndex="6">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L68" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="94.0"
+                       styleClass="table-row-cell6" GridPane.columnIndex="8" GridPane.rowIndex="6">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L67" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="98.0"
+                       styleClass="table-row-cell6" GridPane.columnIndex="7" GridPane.rowIndex="6">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L66" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="115.0"
+                       styleClass="table-row-column-cell6" GridPane.columnIndex="6" GridPane.rowIndex="6">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L65" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="107.0"
+                       styleClass="table-row-cell6" GridPane.columnIndex="5" GridPane.rowIndex="6">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L64" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="83.0"
+                       styleClass="table-row-cell6" GridPane.columnIndex="4" GridPane.rowIndex="6">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L63" alignment="CENTER" onMouseClicked="#clickedLabel" prefHeight="52.0" prefWidth="59.0"
+                       styleClass="table-row-column-cell6" GridPane.columnIndex="3" GridPane.rowIndex="6">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L71" onMouseClicked="#clickedLabel" alignment="CENTER" prefHeight="52.0" prefWidth="59.0" styleClass="table-column-cell1"
+                       GridPane.columnIndex="1" GridPane.rowIndex="7">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L72"  onMouseClicked="#clickedLabel" alignment="CENTER" prefHeight="52.0" prefWidth="59.0" styleClass="table-cell"
+                       GridPane.columnIndex="2" GridPane.rowIndex="7">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L73" onMouseClicked="#clickedLabel" alignment="CENTER" prefHeight="52.0" prefWidth="59.0" styleClass="table-column-cell3"
+                       GridPane.columnIndex="3" GridPane.rowIndex="7">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L74"  onMouseClicked="#clickedLabel" alignment="CENTER" prefHeight="52.0" prefWidth="102.0" styleClass="table-cell"
+                       GridPane.columnIndex="4" GridPane.rowIndex="7">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L75" onMouseClicked="#clickedLabel"  alignment="CENTER" prefHeight="52.0" prefWidth="113.0" styleClass="table-cell"
+                       GridPane.columnIndex="5" GridPane.rowIndex="7">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L76" onMouseClicked="#clickedLabel"  alignment="CENTER" prefHeight="52.0" prefWidth="89.0" styleClass="table-column-cell6"
+                       GridPane.columnIndex="6" GridPane.rowIndex="7">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L77" onMouseClicked="#clickedLabel"  alignment="CENTER" prefHeight="52.0" prefWidth="86.0" styleClass="table-cell"
+                       GridPane.columnIndex="7" GridPane.rowIndex="7">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L78" onMouseClicked="#clickedLabel"  alignment="CENTER" prefHeight="52.0" prefWidth="78.0" styleClass="table-cell"
+                       GridPane.columnIndex="8" GridPane.rowIndex="7">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L79" onMouseClicked="#clickedLabel"  alignment="CENTER" prefHeight="52.0" prefWidth="108.0"
+                       styleClass="table-column-cell9" GridPane.columnIndex="9" GridPane.rowIndex="7">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L81" onMouseClicked="#clickedLabel"  alignment="CENTER" prefHeight="52.0" prefWidth="59.0" styleClass="table-column-cell1"
+                       GridPane.columnIndex="1" GridPane.rowIndex="8">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L82" onMouseClicked="#clickedLabel"  alignment="CENTER" prefHeight="52.0" prefWidth="59.0" styleClass="table-cell"
+                       GridPane.columnIndex="2" GridPane.rowIndex="8">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L83" onMouseClicked="#clickedLabel"  alignment="CENTER" prefHeight="52.0" prefWidth="59.0" styleClass="table-column-cell3"
+                       GridPane.columnIndex="3" GridPane.rowIndex="8">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L84" onMouseClicked="#clickedLabel"  alignment="CENTER" prefHeight="52.0" prefWidth="106.0" styleClass="table-cell"
+                       GridPane.columnIndex="4" GridPane.rowIndex="8">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L85" onMouseClicked="#clickedLabel"  alignment="CENTER" prefHeight="52.0" prefWidth="99.0" styleClass="table-cell"
+                       GridPane.columnIndex="5" GridPane.rowIndex="8">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L86" onMouseClicked="#clickedLabel"  alignment="CENTER" prefHeight="52.0" prefWidth="79.0" styleClass="table-column-cell6"
+                       GridPane.columnIndex="6" GridPane.rowIndex="8">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L87" onMouseClicked="#clickedLabel"  alignment="CENTER" prefHeight="52.0" prefWidth="87.0" styleClass="table-cell"
+                       GridPane.columnIndex="7" GridPane.rowIndex="8">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L88" onMouseClicked="#clickedLabel"  alignment="CENTER" prefHeight="52.0" prefWidth="107.0" styleClass="table-cell"
+                       GridPane.columnIndex="8" GridPane.rowIndex="8">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L89"  onMouseClicked="#clickedLabel" alignment="CENTER" prefHeight="52.0" prefWidth="115.0"
+                       styleClass="table-column-cell9" GridPane.columnIndex="9" GridPane.rowIndex="8">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L91" onMouseClicked="#clickedLabel"  alignment="CENTER" prefHeight="52.0" prefWidth="59.0" styleClass="table-row3-column1"
+                       GridPane.columnIndex="1" GridPane.rowIndex="9">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L94" onMouseClicked="#clickedLabel"  alignment="CENTER" prefHeight="52.0" prefWidth="97.0" styleClass="table-row-cell6"
+                       GridPane.columnIndex="4" GridPane.rowIndex="9">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L93" onMouseClicked="#clickedLabel"  alignment="CENTER" prefHeight="52.0" prefWidth="59.0"
+                       styleClass="table-row-column-cell6" GridPane.columnIndex="3" GridPane.rowIndex="9">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L92" onMouseClicked="#clickedLabel"  alignment="CENTER" prefHeight="52.0" prefWidth="59.0" styleClass="table-row-cell6"
+                       GridPane.columnIndex="2" GridPane.rowIndex="9">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L97" onMouseClicked="#clickedLabel"  alignment="CENTER" prefHeight="52.0" prefWidth="87.0" styleClass="table-row-cell6"
+                       GridPane.columnIndex="7" GridPane.rowIndex="9">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L96" onMouseClicked="#clickedLabel"  alignment="CENTER" prefHeight="52.0" prefWidth="76.0"
+                       styleClass="table-row-column-cell6" GridPane.columnIndex="6" GridPane.rowIndex="9">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L95" onMouseClicked="#clickedLabel"  alignment="CENTER" prefHeight="52.0" prefWidth="116.0" styleClass="table-row-cell6"
+                       GridPane.columnIndex="5" GridPane.rowIndex="9">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L99" onMouseClicked="#clickedLabel"  alignment="CENTER" prefHeight="52.0" prefWidth="119.0"
+                       styleClass="table-row-column-cell6" GridPane.columnIndex="9" GridPane.rowIndex="9">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="L98" onMouseClicked="#clickedLabel"  alignment="CENTER" prefHeight="52.0" prefWidth="110.0" styleClass="table-row-cell6"
+                       GridPane.columnIndex="8" GridPane.rowIndex="9">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
 
 
+            </children>
 
 
-         </children>
+        </GridPane>
+        <Label layoutX="630.0" layoutY="71.0" text="Time: ">
+            <font>
+                <Font size="16.0"/>
+            </font>
+        </Label>
+        <Label fx:id="timer" layoutX="673.0" layoutY="71.0" prefHeight="25.0" prefWidth="60.0" text="0 s">
+            <font>
+                <Font size="16.0"/>
+            </font>
+        </Label>
+        <Button layoutX="630.0" layoutY="208.0" mnemonicParsing="false" onMouseClicked="#solveYourself"
+                text="Solve yourself">
+            <font>
+                <Font size="16.0"/>
+            </font>
+        </Button>
+        <Button layoutX="647.0" layoutY="331.0" mnemonicParsing="false" onMouseClicked="#ready" text="Submit">
+            <font>
+                <Font size="16.0"/>
+            </font>
+        </Button>
+    </children>
 
-
-      </GridPane>
-      <Label layoutX="630.0" layoutY="71.0" text="Time: ">
-         <font>
-            <Font size="16.0" />
-         </font>
-      </Label>
-      <Label fx:id="timer" layoutX="673.0" layoutY="71.0" prefHeight="25.0" prefWidth="60.0" text="0 s">
-         <font>
-            <Font size="16.0" />
-         </font>
-      </Label>
-      <Button layoutX="630.0" layoutY="208.0" mnemonicParsing="false" onMouseClicked="#solveYourself" text="Solve yourself">
-         <font>
-            <Font size="16.0" />
-         </font>
-      </Button>
-      <Button layoutX="647.0" layoutY="331.0" mnemonicParsing="false" onMouseClicked="#ready" text="Submit">
-         <font>
-            <Font size="16.0" />
-         </font>
-      </Button>
-   </children>
-
-   <fx:define>
-      <ArrayList fx:id="labels">
+    <fx:define>
+        <ArrayList fx:id="labels">
             <ArrayList fx:id="row1">
-                  <fx:reference source="L11" />
-                  <fx:reference source="L12" />
-                  <fx:reference source="L13" />
-                  <fx:reference source="L14" />
-                  <fx:reference source="L15" />
-                  <fx:reference source="L16" />
-                  <fx:reference source="L17" />
-                  <fx:reference source="L18" />
-                  <fx:reference source="L19" />
+                <fx:reference source="L11"/>
+                <fx:reference source="L12"/>
+                <fx:reference source="L13"/>
+                <fx:reference source="L14"/>
+                <fx:reference source="L15"/>
+                <fx:reference source="L16"/>
+                <fx:reference source="L17"/>
+                <fx:reference source="L18"/>
+                <fx:reference source="L19"/>
             </ArrayList>
             <ArrayList fx:id="row2">
-                  <fx:reference source="L21" />
-                  <fx:reference source="L22" />
-                  <fx:reference source="L23" />
-                  <fx:reference source="L24" />
-                  <fx:reference source="L25" />
-                  <fx:reference source="L26" />
-                  <fx:reference source="L27" />
-                  <fx:reference source="L28" />
-                  <fx:reference source="L29" />
+                <fx:reference source="L21"/>
+                <fx:reference source="L22"/>
+                <fx:reference source="L23"/>
+                <fx:reference source="L24"/>
+                <fx:reference source="L25"/>
+                <fx:reference source="L26"/>
+                <fx:reference source="L27"/>
+                <fx:reference source="L28"/>
+                <fx:reference source="L29"/>
             </ArrayList>
             <ArrayList fx:id="row3">
-                  <fx:reference source="L31" />
-                  <fx:reference source="L32" />
-                  <fx:reference source="L33" />
-                  <fx:reference source="L34" />
-                  <fx:reference source="L35" />
-                  <fx:reference source="L36" />
-                  <fx:reference source="L37" />
-                  <fx:reference source="L38" />
-                  <fx:reference source="L39" />
+                <fx:reference source="L31"/>
+                <fx:reference source="L32"/>
+                <fx:reference source="L33"/>
+                <fx:reference source="L34"/>
+                <fx:reference source="L35"/>
+                <fx:reference source="L36"/>
+                <fx:reference source="L37"/>
+                <fx:reference source="L38"/>
+                <fx:reference source="L39"/>
             </ArrayList>
             <ArrayList fx:id="row4">
-                  <fx:reference source="L41" />
-                  <fx:reference source="L42" />
-                  <fx:reference source="L43" />
-                  <fx:reference source="L44" />
-                  <fx:reference source="L45" />
-                  <fx:reference source="L46" />
-                  <fx:reference source="L47" />
-                  <fx:reference source="L48" />
-                  <fx:reference source="L49" />
+                <fx:reference source="L41"/>
+                <fx:reference source="L42"/>
+                <fx:reference source="L43"/>
+                <fx:reference source="L44"/>
+                <fx:reference source="L45"/>
+                <fx:reference source="L46"/>
+                <fx:reference source="L47"/>
+                <fx:reference source="L48"/>
+                <fx:reference source="L49"/>
             </ArrayList>
             <ArrayList fx:id="row5">
-                  <fx:reference source="L51" />
-                  <fx:reference source="L52" />
-                  <fx:reference source="L53" />
-                  <fx:reference source="L54" />
-                  <fx:reference source="L55" />
-                  <fx:reference source="L56" />
-                  <fx:reference source="L57" />
-                  <fx:reference source="L58" />
-                  <fx:reference source="L59" />
+                <fx:reference source="L51"/>
+                <fx:reference source="L52"/>
+                <fx:reference source="L53"/>
+                <fx:reference source="L54"/>
+                <fx:reference source="L55"/>
+                <fx:reference source="L56"/>
+                <fx:reference source="L57"/>
+                <fx:reference source="L58"/>
+                <fx:reference source="L59"/>
             </ArrayList>
             <ArrayList fx:id="row6">
-                  <fx:reference source="L61" />
-                  <fx:reference source="L62" />
-                  <fx:reference source="L63" />
-                  <fx:reference source="L64" />
-                  <fx:reference source="L65" />
-                  <fx:reference source="L66" />
-                  <fx:reference source="L67" />
-                  <fx:reference source="L68" />
-                  <fx:reference source="L69" />
+                <fx:reference source="L61"/>
+                <fx:reference source="L62"/>
+                <fx:reference source="L63"/>
+                <fx:reference source="L64"/>
+                <fx:reference source="L65"/>
+                <fx:reference source="L66"/>
+                <fx:reference source="L67"/>
+                <fx:reference source="L68"/>
+                <fx:reference source="L69"/>
             </ArrayList>
             <ArrayList fx:id="row7">
 
-                  <fx:reference source="L71" />
-                  <fx:reference source="L72" />
-                  <fx:reference source="L73" />
-                  <fx:reference source="L74" />
-                  <fx:reference source="L75" />
-                  <fx:reference source="L76" />
-                  <fx:reference source="L77" />
-                  <fx:reference source="L78" />
-                  <fx:reference source="L79" />
+                <fx:reference source="L71"/>
+                <fx:reference source="L72"/>
+                <fx:reference source="L73"/>
+                <fx:reference source="L74"/>
+                <fx:reference source="L75"/>
+                <fx:reference source="L76"/>
+                <fx:reference source="L77"/>
+                <fx:reference source="L78"/>
+                <fx:reference source="L79"/>
 
             </ArrayList>
 
 
             <ArrayList fx:id="row8">
 
-                  <fx:reference source="L81" />
-                  <fx:reference source="L82" />
-                  <fx:reference source="L83" />
-                  <fx:reference source="L84" />
-                  <fx:reference source="L85" />
-                  <fx:reference source="L86" />
-                  <fx:reference source="L87" />
-                  <fx:reference source="L88" />
-                  <fx:reference source="L89" />
+                <fx:reference source="L81"/>
+                <fx:reference source="L82"/>
+                <fx:reference source="L83"/>
+                <fx:reference source="L84"/>
+                <fx:reference source="L85"/>
+                <fx:reference source="L86"/>
+                <fx:reference source="L87"/>
+                <fx:reference source="L88"/>
+                <fx:reference source="L89"/>
             </ArrayList>
 
 
             <ArrayList fx:id="row9">
 
-                  <fx:reference source="L91" />
-                  <fx:reference source="L92" />
-                  <fx:reference source="L93" />
-                  <fx:reference source="L94" />
-                  <fx:reference source="L95" />
-                  <fx:reference source="L96" />
-                  <fx:reference source="L97" />
-                  <fx:reference source="L98" />
-                  <fx:reference source="L99" />
+                <fx:reference source="L91"/>
+                <fx:reference source="L92"/>
+                <fx:reference source="L93"/>
+                <fx:reference source="L94"/>
+                <fx:reference source="L95"/>
+                <fx:reference source="L96"/>
+                <fx:reference source="L97"/>
+                <fx:reference source="L98"/>
+                <fx:reference source="L99"/>
 
             </ArrayList>
 
 
-
-
-      </ArrayList>
-   </fx:define>
+        </ArrayList>
+    </fx:define>
 </AnchorPane>
