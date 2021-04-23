@@ -1,6 +1,5 @@
 package sample.model;
 
-import com.sun.istack.internal.Nullable;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -52,8 +51,8 @@ public class StageChanger {
     }
 
 
-    public static void closeNumbers(int num){
-        
+    public static void closeNumbers(String number){
+        GameController.insertNumber(number);
         secondStage.close();
     }
 }
