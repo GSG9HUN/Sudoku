@@ -7,23 +7,22 @@ import javafx.scene.layout.Background;
 import javafx.scene.paint.Color;
 import sample.model.Game;
 import sample.model.StageChanger;
+import sample.model.Time;
 
 import java.io.IOException;
 import java.util.ArrayList;
 
 
-
 public class GameController {
 
 
-
-    public Label timer;
-
+    @FXML
+    private Label timer;
     private static Game game;
     @FXML
-    public ArrayList<ArrayList<Label>> labels;
-
+    private ArrayList<ArrayList<Label>> labels;
     static Label pressedLabel;
+    private Time time;
 
 
 
@@ -32,6 +31,7 @@ public class GameController {
     public  void initialize() {
             game = new Game();
             setGui();
+            time = new Time(this);
 
     }
 
@@ -78,6 +78,10 @@ public class GameController {
 
 
     public void clickedLabel(MouseEvent mouseEvent) throws IOException {
+        if(!time.isTimerStarted()){
+            time.timerStart();
+            time.setTimerStarted(true);
+        }
         pressedLabel = (Label) mouseEvent.getSource();
         StageChanger.openNumbers("view/Numbers.fxml","Numbers");
 
@@ -88,6 +92,11 @@ public class GameController {
         game.printTable();
         if(game.solve(0,0))
         {
+            for(int i=0; i<9;i++){
+                for (int j=0;j<9;j++){
+                    labels.get(i).get(j).setText(String.valueOf(game.getTableElement(i,j)));
+                }
+            }
             game.printTable();
         }else{
             System.out.println("No solution!");
@@ -96,7 +105,14 @@ public class GameController {
     }
 
     public void ready(MouseEvent mouseEvent) {
+
         game.printTable();
+    }
+
+
+    public void setTimer(int time){
+        timer.setText(time+" s.");
+
     }
 
 
