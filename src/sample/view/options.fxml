@@ -6,7 +6,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.OptionsController">
    <children>
       <Label layoutX="169.0" layoutY="14.0" text="Sudoku difficulties">
@@ -14,22 +13,22 @@
             <Font name="System Bold Italic" size="30.0" />
          </font>
       </Label>
-      <CheckBox layoutX="251.0" layoutY="250.0" mnemonicParsing="false" text="Hard">
+      <CheckBox fx:id="Hard" layoutX="370.0" layoutY="146.0" mnemonicParsing="false" onAction="#onlyOneCanChecked" text="Hard">
          <font>
             <Font size="16.0" />
          </font>
       </CheckBox>
-      <CheckBox layoutX="251.0" layoutY="200.0" mnemonicParsing="false" text="Medium">
+      <CheckBox fx:id="Medium" layoutX="159.0" layoutY="146.0" mnemonicParsing="false" onAction="#onlyOneCanChecked" text="Medium">
          <font>
             <Font size="16.0" />
          </font>
       </CheckBox>
-      <CheckBox layoutX="251.0" layoutY="150.0" mnemonicParsing="false" text="Easy">
+      <CheckBox fx:id="Easy" layoutX="372.0" layoutY="94.0" mnemonicParsing="false" onAction="#onlyOneCanChecked" text="Easy">
          <font>
             <Font size="16.0" />
          </font>
       </CheckBox>
-      <CheckBox layoutX="251.0" layoutY="100.0" mnemonicParsing="false" text="Beginner">
+      <CheckBox fx:id="Beginner" layoutX="159.0" layoutY="94.0" mnemonicParsing="false" onAction="#onlyOneCanChecked" text="Beginner">
          <font>
             <Font size="16.0" />
          </font>
@@ -44,5 +43,15 @@
             <Font size="18.0" />
          </font>
       </Button>
+      <CheckBox fx:id="Expert" layoutX="159.0" layoutY="200.0" mnemonicParsing="false" onAction="#onlyOneCanChecked" text="Expert">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="Ultimate" layoutX="370.0" layoutY="200.0" mnemonicParsing="false" onAction="#onlyOneCanChecked" text="Ultimate">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </CheckBox>
    </children>
 </AnchorPane>

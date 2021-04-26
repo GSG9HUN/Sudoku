@@ -1,15 +1,13 @@
 package sample.model;
 
 public class Options {
+    private static String difficulties= "Easy";
 
-    private static String difficulty = new String("Easy");
-
-
-    public static String getDifficulty() {
-        return difficulty;
+    public static String getDifficulties() {
+        return difficulties;
     }
 
-    public static void setDifficulty(String difficulty) {
-        Options.difficulty = difficulty;
+    public static void setDifficulties(String difficulties) {
+        Options.difficulties = difficulties;
     }
 }
