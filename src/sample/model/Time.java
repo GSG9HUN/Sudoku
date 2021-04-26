@@ -1,16 +1,12 @@
 package sample.model;
 
-import javafx.animation.KeyFrame;
-import javafx.animation.Timeline;
 import javafx.application.Platform;
 import sample.controller.GameController;
-
-import java.time.Duration;
 import java.util.Timer;
 import java.util.TimerTask;
 
 public class Time {
-    private Timer timer = new Timer();
+    private final Timer timer = new Timer();
     private int seconds=0;
     GameController gameController;
     private boolean timerStarted = false;
@@ -30,6 +26,7 @@ public class Time {
                     gameController.setTimer(seconds);
             });
         }},1000,1000);
+
     }
 
     public boolean isTimerStarted() {

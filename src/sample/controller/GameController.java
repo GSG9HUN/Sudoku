@@ -9,6 +9,7 @@ import sample.model.Game;
 import sample.model.StageChanger;
 import sample.model.Time;
 
+import javax.swing.*;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -21,7 +22,7 @@ public class GameController {
     private static Game game;
     @FXML
     private ArrayList<ArrayList<Label>> labels;
-    static Label pressedLabel;
+    Label pressedLabel;
     private Time time;
 
 
@@ -32,6 +33,7 @@ public class GameController {
             game = new Game();
             setGui();
             time = new Time(this);
+            StageChanger.setGameController(this);
 
     }
 
@@ -49,13 +51,13 @@ public class GameController {
         }
     }
 
-    public static void insertNumber(String num){
+    public void insertNumber(String num){
 
         int row = getPressedLabelRow();
         int col = getPressedLabelCol();
         int number = Integer.parseInt(num);
 
-        if (game.isSafe(row, col, number)) {
+        if (game.isSafe(row, col, number, game.getTable())) {
             pressedLabel.setTextFill(Color.GREEN);
             game.insertNumberInTable(row,col, number);
         } else {
@@ -67,13 +69,12 @@ public class GameController {
         pressedLabel = null;
     }
 
-    private static int getPressedLabelRow() {
+    private int getPressedLabelRow() {
         return (int) pressedLabel.getProperties().get("gridpane-row")-1;
     }
 
-    private static int getPressedLabelCol() {
+    private int getPressedLabelCol() {
         return (int) pressedLabel.getProperties().get("gridpane-column")-1;
-
     }
 
 
@@ -87,26 +88,57 @@ public class GameController {
 
     }
 
-   public void solveYourself(MouseEvent mouseEvent) {
-
-        game.printTable();
-        if(game.solve(0,0))
-        {
-            for(int i=0; i<9;i++){
-                for (int j=0;j<9;j++){
-                    labels.get(i).get(j).setText(String.valueOf(game.getTableElement(i,j)));
-                }
-            }
-            game.printTable();
-        }else{
-            System.out.println("No solution!");
-        }
+   public void solveYourself(MouseEvent mouseEvent) throws IOException {
+        StageChanger.loadSolveStage();
 
     }
 
-    public void ready(MouseEvent mouseEvent) {
+    public void solve(String result) {
+        switch (result){
+            case "aktualis":
+                if(game.solve(0,0,game.getTable())) {
+                    insertNumbers("aktualis");
+                }else{
+                    System.out.println("No solution!");
+                }
+                break;
+            case "kezdeti":
+                if(game.solve(0,0,game.getNotModifiedTable())){
+                    insertNumbers("kezdeti");
+                    System.out.println("Have solution!");
+                }else{
+                    System.out.println("No solution!");
+                }
+                break;
+        }
+    }
 
-        game.printTable();
+
+    public void ready(MouseEvent mouseEvent) {
+        if(game.checkIfBoardIsFullyAndCorrect()){
+        }else {
+            System.out.println("A tábla nem teljes vagy hibás;");
+        }
+    }
+
+
+    private void insertNumbers(String string){
+        for(int i=0;i<labels.size();i++){
+            for(int j=0;j<labels.get(i).size();j++){
+                if("aktualis".equals(string)){
+                    System.out.println(labels.get(i).get(j).getTextFill());
+                    if(!(labels.get(i).get(j).getTextFill() ==Color.BLACK)){
+                        labels.get(i).get(j).setTextFill(Color.BLUE);
+                    }
+                    labels.get(i).get(j).setText(String.valueOf(game.getTable()[i][j]));
+                }else {
+                    if(!(labels.get(i).get(j).getTextFill() ==Color.BLACK)){
+                        labels.get(i).get(j).setTextFill(Color.BLUE);
+                    }
+                    labels.get(i).get(j).setText(String.valueOf(game.getNotModifiedTable()[i][j]));
+                }
+            }
+        }
     }
 
 

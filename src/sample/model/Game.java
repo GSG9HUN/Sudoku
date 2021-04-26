@@ -4,14 +4,23 @@ import java.util.*;
 
 public class Game {
 
+
     int[][] table = new int[9][9];
+    int[][] notModifiedTable= new int[9][9];
     int clues;
     ArrayList<Integer> numbers = new ArrayList<>();
     public Game() {
         init();
         createBoard();
         deleteFields();
+        copy();
 
+    }
+
+    private void copy() {
+        for (int i=0;i<9;i++){
+            System.arraycopy(table[i],0,notModifiedTable[i],0,9);
+        }
     }
 
     private void deleteFields() {
@@ -25,7 +34,6 @@ public class Game {
                 deletedFields++;
             }
         }
-        printTable();
 
     }
 
@@ -41,7 +49,6 @@ public class Game {
         pickTwoRandomGroupsRowSide();
         pickTwoRandomGroupsColSide();
 
-        printTable();
     }
 
 
@@ -204,7 +211,7 @@ public class Game {
         }
     }
 
-    public boolean solve(int row, int col) {
+    public boolean solve(int row, int col, int[][] table) {
         if (row == table.length - 1 && col == table[row].length) {
             return true;
         }
@@ -215,13 +222,13 @@ public class Game {
         }
 
         if (table[row][col] != 0)
-            return solve(row, col + 1);
+            return solve(row, col + 1,table);
 
         for (int i = 1; i < 10; i++) {
-            if (isSafe(row, col, i)) {
+            if (isSafe(row, col, i,table)) {
                 table[row][col] = i;
-                printTable();
-                if (solve(row, col + 1)) {
+                printTable(table);
+                if (solve(row, col + 1,table)) {
                     return true;
                 }
             }
@@ -230,7 +237,7 @@ public class Game {
         return false;
     }
 
-    public boolean isSafe(int row, int col, int num) {
+    public boolean isSafe(int row, int col, int num, int[][] table) {
 
         for (int i = 0; i < 9; i++) {
             if (table[row][i] == num) {
@@ -261,7 +268,7 @@ public class Game {
         return table[row][col];
     }
 
-    public void printTable() {
+    public void printTable(int[][] table) {
 
         System.out.println("-------------------------");
 
@@ -287,7 +294,6 @@ public class Game {
 
         }
         System.out.println("-------------------------");
-
     }
 
     public void setTable(int[][] grid) {
@@ -308,10 +314,9 @@ public class Game {
         if (table[row][col] != 0)
             return generate(row, col + 1);
 
-        for (int i = 0; i < numbers.size(); i++) {
-            if (isSafe(row, col, numbers.get(i))) {
-                table[row][col] = numbers.get(i);
-                printTable();
+        for (Integer number : numbers) {
+            if (isSafe(row, col, number,table)) {
+                table[row][col] = number;
                 if (generate(row, col + 1)) {
                     return true;
                 }
@@ -321,4 +326,25 @@ public class Game {
         return false;
     }
 
+    public int[][] getTable() {
+        return table;
+    }
+
+    public int[][] getNotModifiedTable() {
+        return notModifiedTable;
+    }
+
+    public boolean checkIfBoardIsFullyAndCorrect(){
+        for(int row =0; row<table.length ;row++){
+            for(int col=0; col<table[row].length;col++){
+                if(table[row][col]==0) {
+                    return false;
+                }
+                if(isSafe(row,col,table[row][col],table)){
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
 }
