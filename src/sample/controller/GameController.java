@@ -8,6 +8,7 @@ import javafx.scene.paint.Color;
 import sample.model.Game;
 import sample.model.StageChanger;
 import sample.model.Time;
+import sample.view.AlertView;
 
 import javax.swing.*;
 import java.io.IOException;
@@ -24,17 +25,18 @@ public class GameController {
     private ArrayList<ArrayList<Label>> labels;
     Label pressedLabel;
     private Time time;
+    private AlertView alerts;
 
 
 
 
     @FXML
     public  void initialize() {
-            game = new Game();
-            setGui();
-            time = new Time(this);
-            StageChanger.setGameController(this);
-
+        game = new Game();
+        time = new Time(this);
+        StageChanger.setGameController(this);
+        alerts = new AlertView();
+        setGui();
     }
 
     private  void setGui() {
@@ -42,6 +44,7 @@ public class GameController {
             for (int j=0;j<9;j++){
                 int num=game.getTableElement(i,j);
                 if(num!=0){
+                    labels.get(i).get(j).setTextFill(Color.BLACK);
                     labels.get(i).get(j).setText(Integer.toString(num));
                     labels.get(i).get(j).setDisable(true);
                 }else{
@@ -62,7 +65,7 @@ public class GameController {
             game.insertNumberInTable(row,col, number);
         } else {
             pressedLabel.setTextFill(Color.RED);
-            game.insertNumberInTable(row,col, 0);
+            game.insertNumberInTable(row,col, number);
         }
 
         pressedLabel.setText(num);
@@ -88,7 +91,7 @@ public class GameController {
 
     }
 
-   public void solveYourself(MouseEvent mouseEvent) throws IOException {
+    public void solveYourself(MouseEvent mouseEvent) throws IOException {
         StageChanger.loadSolveStage();
 
     }
@@ -97,6 +100,7 @@ public class GameController {
         switch (result){
             case "aktualis":
                 if(game.solve(0,0,game.getTable())) {
+                    game.setSolvedByComputer(true);
                     insertNumbers("aktualis");
                 }else{
                     System.out.println("No solution!");
@@ -105,6 +109,7 @@ public class GameController {
             case "kezdeti":
                 if(game.solve(0,0,game.getNotModifiedTable())){
                     insertNumbers("kezdeti");
+                    game.setSolvedByComputer(true);
                     System.out.println("Have solution!");
                 }else{
                     System.out.println("No solution!");
@@ -115,9 +120,18 @@ public class GameController {
 
 
     public void ready(MouseEvent mouseEvent) {
-        if(game.checkIfBoardIsFullyAndCorrect()){
-        }else {
-            System.out.println("A tábla nem teljes vagy hibás;");
+        if(!game.isSolvedByComputer()){
+            if(game.checkIfBoardIsFully()){
+                if(game.checkIfBoardIsCorrect()){
+                    alerts.winAlert.show();
+                }else{
+                    alerts.noCorrectAlert.show();
+                }
+            }else{
+                alerts.emptyFieldAlert.show();
+            }
+        }else{
+            alerts.solvedByComputer.show();
         }
     }
 
@@ -126,9 +140,10 @@ public class GameController {
         for(int i=0;i<labels.size();i++){
             for(int j=0;j<labels.get(i).size();j++){
                 if("aktualis".equals(string)){
-                    System.out.println(labels.get(i).get(j).getTextFill());
                     if(!(labels.get(i).get(j).getTextFill() ==Color.BLACK)){
                         labels.get(i).get(j).setTextFill(Color.BLUE);
+                    }else{
+                        labels.get(i).get(j).setTextFill(Color.BLACK);
                     }
                     labels.get(i).get(j).setText(String.valueOf(game.getTable()[i][j]));
                 }else {

@@ -8,7 +8,10 @@ public class Game {
     int[][] table = new int[9][9];
     int[][] notModifiedTable= new int[9][9];
     int clues;
+    boolean solvedByComputer = false;
     ArrayList<Integer> numbers = new ArrayList<>();
+
+
     public Game() {
         init();
         createBoard();
@@ -16,13 +19,11 @@ public class Game {
         copy();
 
     }
-
     private void copy() {
         for (int i=0;i<9;i++){
             System.arraycopy(table[i],0,notModifiedTable[i],0,9);
         }
     }
-
     private void deleteFields() {
         int deletedFields = 0;
         Random rand = new Random();
@@ -36,13 +37,7 @@ public class Game {
         }
 
     }
-
-    public void insertNumberInTable(int row, int col, int num) {
-        table[row][col] = num;
-    }
-
-
-    public void createBoard() {
+    private void createBoard() {
         generate(0,0);
         pickTwoRandomRows();
         pickTwoRandomCols();
@@ -50,9 +45,11 @@ public class Game {
         pickTwoRandomGroupsColSide();
 
     }
+    public void insertNumberInTable(int row, int col, int num) {
+        table[row][col] = num;
+    }
 
-
-    public void pickTwoRandomGroupsRowSide() {
+    private void pickTwoRandomGroupsRowSide() {
         Random rand = new Random();
         int startGroup = 0;
         int endGroup = 3;
@@ -65,7 +62,6 @@ public class Game {
         changeGroupsByRow(group1,group2);
 
     }
-
     private void changeGroupsByRow(int group1, int group2) {
     int startRowGroup1 = group1*3;
     int startRowGroup2 = group2*3;
@@ -80,9 +76,7 @@ public class Game {
         startRowGroup2++;
     }
     }
-
-
-    public void pickTwoRandomGroupsColSide() {
+    private void pickTwoRandomGroupsColSide() {
         Random rand = new Random();
         int startGroup = 0;
         int endGroup = 3;
@@ -95,7 +89,6 @@ public class Game {
         changeGroupsByCol(group1,group2);
 
     }
-
     private void changeGroupsByCol(int group1, int group2) {
         int startColGroup1 = group1*3;
         int startColGroup2 = group2*3;
@@ -110,8 +103,7 @@ public class Game {
             startColGroup2++;
         }
     }
-
-    public void pickTwoRandomRows() {
+    private void pickTwoRandomRows() {
         Random random = new Random();
         int startRows = 0;
         int endRows = 2;
@@ -129,26 +121,6 @@ public class Game {
         }
 
     }
-
-
-    public void pickTwoRandomCols() {
-        Random random = new Random();
-        int startCols = 0;
-        int endCols = 2;
-        for (int i = 0; i < 3; i++) {
-            int col1 = random.nextInt(endCols-startCols+1)+startCols ;
-            int col2;
-            do {
-                col2 = random.nextInt(endCols-startCols+1)+startCols ;
-            } while (col1 == col2);
-            startCols+=3;
-            endCols+=3;
-            changeCols(col1, col2);
-
-        }
-
-    }
-
     private void changeCols(int col1, int col2) {
         int number;
         for (int i = 0; i < 9; i++) {
@@ -158,7 +130,6 @@ public class Game {
 
         }
     }
-
     private void changeRows(int row1, int row2) {
         int number;
         for (int i = 0; i < 9; i++) {
@@ -168,8 +139,6 @@ public class Game {
 
         }
     }
-
-
     private void init() {
 
         numbers.add(1);
@@ -210,65 +179,7 @@ public class Game {
                 break;
         }
     }
-
-    public boolean solve(int row, int col, int[][] table) {
-        if (row == table.length - 1 && col == table[row].length) {
-            return true;
-        }
-
-        if (col == table[row].length) {
-            row++;
-            col = 0;
-        }
-
-        if (table[row][col] != 0)
-            return solve(row, col + 1,table);
-
-        for (int i = 1; i < 10; i++) {
-            if (isSafe(row, col, i,table)) {
-                table[row][col] = i;
-                printTable(table);
-                if (solve(row, col + 1,table)) {
-                    return true;
-                }
-            }
-            table[row][col] = 0;
-        }
-        return false;
-    }
-
-    public boolean isSafe(int row, int col, int num, int[][] table) {
-
-        for (int i = 0; i < 9; i++) {
-            if (table[row][i] == num) {
-                return false;
-            }
-        }
-
-        for (int i = 0; i < 9; i++) {
-            if (table[i][col] == num) {
-                return false;
-            }
-        }
-
-        int startRow = row - row % 3;
-        int startCol = col - col % 3;
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++) {
-                if (table[i + startRow][j + startCol] == num) {
-                    return false;
-                }
-            }
-        }
-
-        return true;
-    }
-
-    public int getTableElement(int row, int col) {
-        return table[row][col];
-    }
-
-    public void printTable(int[][] table) {
+    private void printTable(int[][] table) {
 
         System.out.println("-------------------------");
 
@@ -295,9 +206,22 @@ public class Game {
         }
         System.out.println("-------------------------");
     }
+    private void pickTwoRandomCols() {
+        Random random = new Random();
+        int startCols = 0;
+        int endCols = 2;
+        for (int i = 0; i < 3; i++) {
+            int col1 = random.nextInt(endCols-startCols+1)+startCols ;
+            int col2;
+            do {
+                col2 = random.nextInt(endCols-startCols+1)+startCols ;
+            } while (col1 == col2);
+            startCols+=3;
+            endCols+=3;
+            changeCols(col1, col2);
 
-    public void setTable(int[][] grid) {
-        table = grid;
+        }
+
     }
 
     public boolean generate(int row, int col) {
@@ -325,26 +249,93 @@ public class Game {
         }
         return false;
     }
-
-    public int[][] getTable() {
-        return table;
-    }
-
-    public int[][] getNotModifiedTable() {
-        return notModifiedTable;
-    }
-
-    public boolean checkIfBoardIsFullyAndCorrect(){
+    public boolean checkIfBoardIsFully(){
         for(int row =0; row<table.length ;row++){
             for(int col=0; col<table[row].length;col++){
                 if(table[row][col]==0) {
                     return false;
                 }
-                if(isSafe(row,col,table[row][col],table)){
+            }
+        }
+        return true;
+    }
+    public boolean checkIfBoardIsCorrect(){
+        for(int row =0; row<table.length ;row++){
+            for(int col=0; col<table[row].length;col++){
+                if(!isSafe(row,col,table[row][col],table)){
                     return false;
                 }
             }
         }
         return true;
+    }
+    public boolean isSafe(int row, int col, int num, int[][] table) {
+
+        for (int i = 0; i < 9; i++) {
+            if (table[row][i] == num) {
+                return false;
+            }
+        }
+
+        for (int i = 0; i < 9; i++) {
+            if (table[i][col] == num) {
+                return false;
+            }
+        }
+
+        int startRow = row - row % 3;
+        int startCol = col - col % 3;
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                if (table[i + startRow][j + startCol] == num) {
+                    return false;
+                }
+            }
+        }
+
+        return true;
+    }
+    public boolean solve(int row, int col, int[][] table) {
+        if (row == table.length - 1 && col == table[row].length) {
+            return true;
+        }
+
+        if (col == table[row].length) {
+            row++;
+            col = 0;
+        }
+
+        if (table[row][col] != 0)
+            return solve(row, col + 1,table);
+
+        for (int i = 1; i < 10; i++) {
+            if (isSafe(row, col, i,table)) {
+                table[row][col] = i;
+                printTable(table);
+                if (solve(row, col + 1,table)) {
+                    return true;
+                }
+            }
+            table[row][col] = 0;
+        }
+        return false;
+    }
+
+    public int[][] getTable() {
+        return table;
+    }
+    public int[][] getNotModifiedTable() {
+        return notModifiedTable;
+    }
+    public int getTableElement(int row, int col) {
+        return table[row][col];
+    }
+
+    public boolean isSolvedByComputer() {
+        return solvedByComputer;
+    }
+
+    public void setSolvedByComputer(boolean solvedByComputer) {
+        this.solvedByComputer = solvedByComputer;
     }
 }
